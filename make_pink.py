@@ -1,5 +1,5 @@
 '''
-eThis code was originally written by Corinne Teeter with intellectual contributions from
+This code was written by Corinne Teeter with intellectual contributions from
 Stefan Mihalas, Vilas Menon, Ramakrishnan Iyer, and Nicholas Cain.  This code creates the 
 basic pink noise stimuli used in the noise1, noise2, and ramp to rheo stimulus used in the Allen 
 Institute for Brain Science electrophysiology pipeline.
