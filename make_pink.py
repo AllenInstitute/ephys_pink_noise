@@ -1,5 +1,52 @@
-'''Written by Corinne Teeter.  This code creates the basic pink noise stimuli
-used in the noise1, noise2, and ramp to rheo stimulus used in the Allen 
+'''
+Allen Institute Software License – This software license is the 2-clause BSD license 
+plus a third clause that prohibits redistribution for commercial purposes without further permission.
+
+Copyright © 2017. Allen Institute. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
+following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the 
+following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the 
+following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Redistributions for commercial purposes are not permitted without the Allen Institute’s written permission.
+For purposes of this license, commercial purposes is the incorporation of the Allen Institute's software into
+anything for which you will charge fees or other compensation. Contact terms@alleninstitute.org for commercial
+licensing opportunities.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Allen Institute Contribution Agreement
+
+This document describes the terms under which you may make “Contributions” — which may include without limitation, software additions, revisions, bug fixes, configuration changes, documentation, or any other materials — to any of the projects owned or managed by the Allen Institute. If you have questions about these terms, please contact us at terms@alleninstitute.org.
+
+You certify that:
+
+• Your Contributions are either:
+
+    Created in whole or in part by you and you have the right to submit them under the designated license (described below); or
+
+    Based upon previous work that, to the best of your knowledge, is covered under an appropriate open source license and you have the right under that license to submit that work with modifications, whether created in whole or in part by you, under the designated license; or
+
+    Provided directly to you by some other person who certified (1) or (2) and you have not modified them.
+
+• You are granting your Contributions to the Allen Institute under the terms of the 2-Clause BSD license (the “designated license”).
+
+• You understand and agree that the Allen Institute projects and your Contributions are public and that a record of the Contributions (including all metadata and personal information you submit with them) is maintained indefinitely and may be redistributed consistent with the Allen Institute’s mission and the 2-Clause BSD license.
+
+This code was originally written by Corinne Teeter with intellectual contributions from
+Stefan Mihalas, Vilas Menon, Ramakrishnan Iyer, and Nicholas Cain.  This code creates the 
+basic pink noise stimuli used in the noise1, noise2, and ramp to rheo stimulus used in the Allen 
 Institute for Brain Science electrophysiology pipeline.
 Note that the output trace created by this code may not exactly match
 what was used in our stimulus due to the random seed.  Exact traces 
@@ -27,10 +74,10 @@ totalNumOfPoints=stimTimeLength/sampleResolution
 tvector=np.arange(0,totalNumOfPoints)*sampleResolution
 
 # The pink noise is created by summing up sine waves at random phases 
-# at frequencies in 1 Htz increments. 1 htz increments were chosen  (as 
+# at frequencies in 1 Hz increments. 1 Hz increments were chosen  (as 
 # opposed to doing it every 0.1 htz or some other value) because we wanted
 # a waveform that was periodic at 1 Htz frequencies so that specific
-# history dependent changes could be observed
+# history dependent changes could be observed.
 freqResolution=1
 
 phaseVector1=np.random.rand(int(100*1/freqResolution))*2*np.pi
