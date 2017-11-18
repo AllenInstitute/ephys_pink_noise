@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Allen Institute Software License - This software license is the 2-clause BSD
 # license plus a third clause that prohibits redistribution for commercial
 # purposes without further permission.
@@ -32,6 +33,17 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
+=======
+'''
+This code was written by Corinne Teeter with intellectual contributions from
+Stefan Mihalas, Vilas Menon, Ramakrishnan Iyer, and Nicholas Cain.  This code creates the 
+basic pink noise stimuli used in the noise1, noise2, and ramp to rheo stimulus used in the Allen 
+Institute for Brain Science electrophysiology pipeline.
+Note that the output trace created by this code may not exactly match
+what was used in our stimulus due to the random seed.  Exact traces 
+can be found in the experimental .nwb files.
+'''
+>>>>>>> ac3b5b4e3faa9c4aa7e63d3b7426337833217b94
 
 import numpy as np
 import matplotlib.pylab as plt
